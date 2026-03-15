@@ -15,6 +15,7 @@ public class Sobre extends Envio {
 
     public Sobre(String idSeguimiento, double peso, Direccion destino) {
         super(idSeguimiento, peso, destino);
+        this.esAcolchado = false;
     }
 
     @Override
@@ -24,7 +25,7 @@ public class Sobre extends Envio {
         if (esAcolchado)
                 precio += 1.5;
         
-        if (destino.equals("Las Palmas"))
+        if (destino.getCiudad().equals("Las Palmas"))
             precio -= 0.5;
         
         return(precio);

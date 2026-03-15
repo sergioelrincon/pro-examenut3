@@ -16,11 +16,12 @@ public class Principal {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
         double precioFinal;
-// 1. Instanciar objetos
+        
+        // 1. Instanciar objetos
         Direccion dir = new Direccion("Calle Mayor 5", "35002", "Las Palmas");
         Paquete p1 = new Paquete("GP-999", 8.5, dir, 1.2);
+        //Paquete p2 = new Paquete("GP-999", 8.5, dir, 1.2);    // Paquete de prueba, para comprobar el método equals
 
         // 2. Acceder y modificar el array del historial 
         p1.historialParadas[0] = "Madrid";
@@ -35,5 +36,13 @@ public class Principal {
         precioFinal = p1.calcularPrecioFinal();
         System.out.println("Precio final del paquete: " + precioFinal);
         System.out.println("Seguro del paquete: " + p1.calcularSeguro(precioFinal));
+        
+        /*
+        // Comprobamos si los paquetes p1 y p2 son iguales
+        if (p2.equals(p1))
+            System.out.println("Son iguales");
+        else
+            System.out.println("No son iguales");
+        */
     }    
 }

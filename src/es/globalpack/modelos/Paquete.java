@@ -22,7 +22,8 @@ public class Paquete extends Envio implements Asegurable {
     public double calcularPrecioFinal() {
         double precio = 5.0; 
         
-        precio += (peso - 5) * 2.0;
+        if (peso > 5)
+            precio += (peso - 5) * 2.0;
         
         if (volumen > 1)
             precio += 10.0;

@@ -36,7 +36,8 @@ public abstract class Envio {
             return false;
         }
         final Envio other = (Envio) obj;
-        return Objects.equals(this.idSeguimiento, other.idSeguimiento);
+        
+        return other.idSeguimiento.equals(idSeguimiento);
     }
     
 
